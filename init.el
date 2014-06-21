@@ -17,9 +17,7 @@
 (setq-default tab-width 2)
 (setq-default js-indent-level 2)
 
-;; spaces, not tabs...
-(setq-default indent-tabs-mode nil)
-;; ..except for Makefiles
+;; Use real tabs in Makefiles
 (add-hook 'make-mode     ( setq indent-tabs-mode t ))
 (add-hook 'makefile-mode ( setq indent-tabs-mode t ))
 

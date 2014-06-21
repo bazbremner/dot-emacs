@@ -2,6 +2,7 @@
 (source melpa)
 
 (depends-on "auto-complete")
+(depends-on "better-defaults")
 (depends-on "cask")
 (depends-on "color-theme")
 (depends-on "color-theme-solarized")
