@@ -28,5 +28,6 @@
 (depends-on "rspec-mode")
 (depends-on "s")
 (depends-on "shut-up")
+(depends-on "smex")
 (depends-on "solarized-theme")
 (depends-on "yaml-mode")

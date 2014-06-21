@@ -32,10 +32,15 @@
 
 (add-hook 'text-mode-hook 'auto-fill-mode)
 
-;; autocomplete
+;; autocomplete and other helpers.
 (ac-config-default)
-
 (projectile-global-mode)
+
+(smex-initialize)
+
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; sane buffer names for dup files. foo/foo and bar/foo, not foo, foo<2>
 (require 'uniquify)
