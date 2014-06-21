@@ -35,6 +35,8 @@
 ;; autocomplete
 (ac-config-default)
 
+(projectile-global-mode)
+
 ;; sane buffer names for dup files. foo/foo and bar/foo, not foo, foo<2>
 (require 'uniquify)
 (setq-default uniquify-buffer-name-style 'forward)
