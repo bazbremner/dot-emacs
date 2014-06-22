@@ -68,7 +68,6 @@
 ;; ruby-mode stuff
 
 (setq ruby-deep-indent-paren nil)
-(add-hook 'ruby-mode-hook '( lambda () (inf-ruby-keys)))
 
 ;; Gem-, Cap- and Rake- files etc are Ruby files:
 (add-to-list 'auto-mode-alist '("\.rake$" . ruby-mode))
