@@ -1,6 +1,6 @@
 ;; -*- lisp -*-
 
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "/opt/boxen/homebrew/share/emacs/site-lisp/")
 
 ;; Cask/Pallet initialisation. Deals with packages automagically
