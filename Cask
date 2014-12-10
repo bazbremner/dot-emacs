@@ -18,6 +18,7 @@
 (depends-on "git-blame")
 (depends-on "haml-mode")
 (depends-on "helm")
+(depends-on "magit")
 (depends-on "markdown-mode")
 (depends-on "package-build")
 (depends-on "pallet")
