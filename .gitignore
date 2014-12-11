@@ -4,3 +4,5 @@ places
 projectile-bookmarks.eld
 .cask/
 themes/
+backups/
+elpa/
