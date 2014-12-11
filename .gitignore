@@ -1,8 +1,8 @@
+.cask/
 ac-comphist.dat
 auto-save-list
-places
-projectile-bookmarks.eld
-.cask/
-themes/
 backups/
 elpa/
+places
+projectile-bookmarks.eld
+themes/
