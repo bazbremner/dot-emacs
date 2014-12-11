@@ -12,6 +12,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; General options.
 
+;; disable splash screen, *scratch* by default.
+(setq inhibit-startup-screen t)
+
 (line-number-mode t)
 (column-number-mode t)
 (global-linum-mode t)
