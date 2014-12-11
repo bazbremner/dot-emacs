@@ -7,6 +7,7 @@
 (depends-on "color-theme")
 (depends-on "color-theme-solarized")
 (depends-on "dash")
+(depends-on "diminish")
 (depends-on "epl")
 (depends-on "f")
 (depends-on "feature-mode")

@@ -51,6 +51,10 @@
     (quietly-read-abbrev-file)
   (file-error nil))
 
+(global-set-key "\C-cg" 'magit-status)
+(eval-after-load 'magit
+  '(diminish 'magit-auto-revert-mode))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set up Puppet mode
 (add-to-list 'auto-mode-alist '("\\.pp$" . puppet-mode))
