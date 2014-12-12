@@ -9,6 +9,7 @@
 (depends-on "dash")
 (depends-on "diminish")
 (depends-on "epl")
+(depends-on "exec-path-from-shell")
 (depends-on "f")
 (depends-on "feature-mode")
 (depends-on "flx-ido")

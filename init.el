@@ -15,6 +15,10 @@
 ;; disable splash screen, *scratch* by default.
 (setq inhibit-startup-screen t)
 
+;; Set PATH, MANPATH and exec-path from the shell
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 ;; OS X's ls doesn't have a --dired option.
 (when (eq system-type 'darwin)
   (setq dired-use-ls-dired nil))
