@@ -19,6 +19,8 @@
 (when (eq system-type 'darwin)
   (setq dired-use-ls-dired nil))
 
+(setq ag-reuse-buffers t)
+
 (line-number-mode t)
 (column-number-mode t)
 (global-linum-mode t)
