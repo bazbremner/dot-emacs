@@ -15,6 +15,10 @@
 ;; disable splash screen, *scratch* by default.
 (setq inhibit-startup-screen t)
 
+;; OS X's ls doesn't have a --dired option.
+(when (eq system-type 'darwin)
+  (setq dired-use-ls-dired nil))
+
 (line-number-mode t)
 (column-number-mode t)
 (global-linum-mode t)
