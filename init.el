@@ -128,4 +128,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(custom-set-variables
+ '(frame-background-mode (quote dark)))
+
 
