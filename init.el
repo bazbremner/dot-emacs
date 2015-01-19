@@ -55,7 +55,6 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; sane buffer names for dup files. foo/foo and bar/foo, not foo, foo<2>
-(require 'uniquify)
 (setq-default uniquify-buffer-name-style 'forward)
 
 (condition-case ()
@@ -94,7 +93,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Cucumber feature-mode
 
-(require 'feature-mode)
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
