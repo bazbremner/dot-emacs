@@ -8,6 +8,7 @@
 (require 'cask)
 (cask-initialize)
 (require 'pallet)
+(pallet-mode t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; General options.
