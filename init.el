@@ -39,11 +39,8 @@
 ;; Don't wrap lines
 (setq default-truncate-lines t)
 
-;; No more blasted ~ and ~x.y~ files.
+;; No more blasted ~ files.
 (setq-default make-backup-files nil)
-(setq-default vc-make-backup-files nil)
-(setq-default backup-enable-predicate nil)
-(setq vc-make-backup-files nil)
 
 (add-hook 'text-mode-hook 'auto-fill-mode)
 
