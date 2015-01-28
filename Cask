@@ -23,6 +23,7 @@
 (depends-on "helm")
 (depends-on "magit")
 (depends-on "markdown-mode")
+(depends-on "org")
 (depends-on "package-build")
 (depends-on "pallet")
 (depends-on "pkg-info")

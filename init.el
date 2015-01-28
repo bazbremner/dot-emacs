@@ -80,6 +80,16 @@
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; org-mode
+(global-set-key "\C-cc" 'org-capture)
+(setq org-directory (expand-file-name "~/.org"))
+(setq org-default-notes-file (concat org-directory "/todo.org"))
+
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ruby-mode stuff
 
 (setq ruby-deep-indent-paren nil)
