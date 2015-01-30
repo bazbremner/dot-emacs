@@ -35,6 +35,7 @@
 
 (setq-default tab-width 2)
 (setq-default js-indent-level 2)
+(setq-default python-indent 2)
 
 ;; Use real tabs in Makefiles
 (add-hook 'make-mode     ( setq indent-tabs-mode t ))
