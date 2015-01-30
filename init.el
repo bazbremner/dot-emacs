@@ -30,6 +30,9 @@
 (column-number-mode t)
 (global-linum-mode t)
 
+;; y or n, rather than yes/no to prompts.
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 (setq-default tab-width 2)
 (setq-default js-indent-level 2)
 
