@@ -49,6 +49,9 @@
 
 (add-hook 'text-mode-hook 'auto-fill-mode)
 
+(when (and (eq system-type 'darwin) (executable-find "aspell"))
+      (setq ispell-program-name (executable-find "aspell")))
+
 ;; autocomplete and other helpers.
 (ac-config-default)
 (projectile-global-mode)
