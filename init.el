@@ -69,7 +69,7 @@
 (global-set-key "\C-cg" 'magit-status)
 (eval-after-load 'magit
   '(diminish 'magit-auto-revert-mode))
-
+(setq magit-last-seen-setup-instructions "1.4.0")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set up color-theme to use Solarised theme.
 (load-theme 'solarized-dark t)
