@@ -35,4 +35,5 @@
 (depends-on "shut-up")
 (depends-on "smex")
 (depends-on "solarized-theme")
+(depends-on "terraform-mode")
 (depends-on "yaml-mode")
