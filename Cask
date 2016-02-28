@@ -19,6 +19,7 @@
 (depends-on "flymake-shell")
 (depends-on "flymake-yaml")
 (depends-on "git-blame")
+(depends-on "go-mode")
 (depends-on "groovy-mode")
 (depends-on "haml-mode")
 (depends-on "helm")

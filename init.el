@@ -96,6 +96,10 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Go
+
+(add-hook 'before-save-hook 'gofmt-before-save)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ruby-mode stuff
 
 (setq ruby-deep-indent-paren nil)
