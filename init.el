@@ -35,7 +35,6 @@
 
 (setq-default tab-width 2)
 (setq-default js-indent-level 2)
-(setq-default python-indent 2)
 
 ;; Use real tabs in Makefiles
 (add-hook 'make-mode     ( setq indent-tabs-mode t ))
@@ -113,6 +112,26 @@
 
 ;; Prefer cperl-mode over perl-mode
 (defalias 'perl-mode 'cperl-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; python-mode
+
+;; Ignoring electric indentation - I'm littering trailing whitespace
+;; all over the place. Borrowed from
+;; http://emacswiki.org/emacs/AutoIndentation
+
+(defun electric-indent-ignore-python (char)
+  "Ignore electric indentation for python-mode"
+  (if (equal major-mode 'python-mode)
+      'no-indent
+    nil))
+(add-hook 'electric-indent-functions 'electric-indent-ignore-python)
+
+;; Enter key executes newline-and-indent
+(defun set-newline-and-indent ()
+  "Map the return key with `newline-and-indent'"
+  (local-set-key (kbd "RET") 'newline-and-indent))
+(add-hook 'python-mode-hook 'set-newline-and-indent)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
