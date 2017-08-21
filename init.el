@@ -164,3 +164,5 @@
  '(frame-background-mode (quote dark)))
 
 
+(custom-set-faces
+ '(default ((t (:background "nil")))))
