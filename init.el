@@ -33,12 +33,14 @@
 ;; y or n, rather than yes/no to prompts.
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+(setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 (setq-default js-indent-level 2)
 
-;; Use real tabs in Makefiles
+;; Use real tabs in Makefiles and Go
 (add-hook 'make-mode     ( setq indent-tabs-mode t ))
 (add-hook 'makefile-mode ( setq indent-tabs-mode t ))
+(add-hook 'go-mode       ( setq indent-tabs-mode t ))
 
 ;; Don't wrap lines
 (setq default-truncate-lines t)
