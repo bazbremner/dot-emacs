@@ -99,7 +99,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Go
 
-(add-hook 'before-save-hook 'gofmt-before-save)
+(defun go-mode-setup ()
+  (setq compile-command "go build -v && go test -v && go vet && golint")
+  (setq gofmt-command "goimports")
+  (add-hook 'before-save-hook 'gofmt-before-save))
+
+(require 'golint)
+(add-hook 'go-mode-hook 'go-mode-setup)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ruby-mode stuff
 
