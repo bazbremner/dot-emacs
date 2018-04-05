@@ -86,6 +86,9 @@
 ;; Cucumber feature-mode
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; org-mode
 (global-set-key "\C-cc" 'org-capture)
@@ -176,8 +179,7 @@
  '(epg-gpg-program "gpg")
  '(package-selected-packages
    (quote
-    (yaml-mode terraform-mode solarized-theme smex rspec-mode puppet-mode projectile pallet markdown-mode magit helm haml-mode groovy-mode go-mode git-blame flymake-yaml flymake-shell flymake-ruby flx-ido feature-mode exec-path-from-shell diminish color-theme-solarized clojure-mode better-defaults auto-complete ag))))
-
+    (neotree yaml-mode terraform-mode solarized-theme smex rspec-mode puppet-mode projectile pallet markdown-mode magit helm haml-mode groovy-mode go-mode git-blame flymake-yaml flymake-shell flymake-ruby flx-ido feature-mode exec-path-from-shell diminish color-theme-solarized clojure-mode better-defaults auto-complete ag))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

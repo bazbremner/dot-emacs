@@ -26,6 +26,7 @@
 (depends-on "helm")
 (depends-on "magit")
 (depends-on "markdown-mode")
+(depends-on "neotree")
 (depends-on "org")
 (depends-on "package-build")
 (depends-on "pallet")
