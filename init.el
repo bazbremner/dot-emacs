@@ -56,8 +56,6 @@
 
 ;; autocomplete and other helpers.
 (ac-config-default)
-(projectile-global-mode)
-
 (smex-initialize)
 
 (global-set-key (kbd "M-x") 'smex)
