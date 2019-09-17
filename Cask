@@ -18,7 +18,6 @@
 (depends-on "flymake-ruby")
 (depends-on "flymake-shell")
 (depends-on "flymake-yaml")
-(depends-on "git-blame")
 (depends-on "go-mode")
 (depends-on "golint")
 (depends-on "groovy-mode")
