@@ -187,12 +187,4 @@
     (neotree yaml-mode terraform-mode solarized-theme smex rspec-mode puppet-mode projectile pallet markdown-mode magit helm haml-mode groovy-mode go-mode git-blame flymake-yaml flymake-shell flymake-ruby flx-ido feature-mode exec-path-from-shell diminish color-theme-solarized clojure-mode better-defaults auto-complete ag))))
 
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:background "nil")))))
-
-
-(custom-set-faces
  '(default ((t (:background "nil")))))
