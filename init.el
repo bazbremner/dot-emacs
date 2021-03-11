@@ -2,6 +2,8 @@
 (require 'package)
 (package-initialize)
 
+(setq warning-suppress-log-types '((package reinitialization)))
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/")
 
