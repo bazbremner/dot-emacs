@@ -86,9 +86,6 @@
 ;; Cucumber feature-mode
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; org-mode
 (global-set-key "\C-cc" 'org-capture)
