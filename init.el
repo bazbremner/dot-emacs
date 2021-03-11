@@ -1,6 +1,4 @@
 ;; -*- lisp -*-
-(require 'package)
-(package-initialize)
 
 (setq warning-suppress-log-types '((package reinitialization)))
 
