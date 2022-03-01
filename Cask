@@ -8,6 +8,7 @@
 (depends-on "color-theme")
 (depends-on "company")
 (depends-on "diminish")
+(depends-on "dockerfile-mode")
 (depends-on "exec-path-from-shell")
 (depends-on "feature-mode")
 (depends-on "flymake-easy")
