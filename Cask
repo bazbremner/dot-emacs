@@ -23,7 +23,6 @@
 (depends-on "magit")
 (depends-on "markdown-mode")
 (depends-on "package-build")
-(depends-on "pallet")
 (depends-on "pinentry")
 (depends-on "pkg-info")
 (depends-on "popup")

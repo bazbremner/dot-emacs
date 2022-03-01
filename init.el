@@ -8,8 +8,8 @@
 ;; Cask/Pallet initialisation. Deals with packages automagically
 (require 'cask)
 (cask-initialize)
-(require 'pallet)
-(pallet-mode t)
+; (require 'pallet)
+; (pallet-mode t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; General options.
