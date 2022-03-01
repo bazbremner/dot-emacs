@@ -1,4 +1,6 @@
 .cask/
+.lsp-session-*
+
 ac-comphist.dat
 auto-save-list
 backups/
