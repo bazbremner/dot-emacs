@@ -57,7 +57,6 @@
       (setq ispell-program-name (executable-find "aspell")))
 
 ;; autocomplete and other helpers.
-(ac-config-default)
 (smex-initialize)
 
 (global-set-key (kbd "M-x") 'smex)
