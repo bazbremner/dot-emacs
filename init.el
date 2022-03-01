@@ -99,12 +99,17 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Go
 
-(defun go-mode-setup ()
-  (setq compile-command "go build -v && go test -v && go vet && golint")
-  (setq gofmt-command "goimports")
-  (add-hook 'before-save-hook 'gofmt-before-save))
+(require 'lsp-mode)
+(add-hook 'go-mode-hook #'lsp)
 
-(require 'golint)
+(defun lsp-go-install-save-hooks ()
+  (add-hook 'before-save-hook #'lsp-format-buffer t t)
+  (add-hook 'before-save-hook #'lsp-organize-imports t t))
+(add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
+
+(defun go-mode-setup ()
+   (setq compile-command "go build -v && go test -v && go vet && golint"))
+
 (add-hook 'go-mode-hook 'go-mode-setup)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ruby-mode stuff
