@@ -51,6 +51,8 @@
 
 (add-hook 'text-mode-hook 'auto-fill-mode)
 
+(add-hook 'terraform-mode-hook 'terraform-format-on-save-mode)
+
 (when (and (eq system-type 'darwin) (executable-find "aspell"))
       (setq ispell-program-name (executable-find "aspell")))
 
