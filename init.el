@@ -2,14 +2,12 @@
 
 (setq warning-suppress-log-types '((package reinitialization)))
 
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/")
 
-;; Cask/Pallet initialisation. Deals with packages automagically
-(require 'cask)
-(cask-initialize)
-; (require 'pallet)
-; (pallet-mode t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; General options.

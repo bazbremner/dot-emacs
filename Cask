@@ -4,7 +4,7 @@
 (depends-on "ag")
 (depends-on "auto-complete")
 (depends-on "better-defaults")
-(depends-on "cask")
+;; (depends-on "cask")
 (depends-on "color-theme")
 (depends-on "company")
 (depends-on "diminish")
