@@ -49,6 +49,9 @@
 ;; No more blasted ~ files.
 (setq-default make-backup-files nil)
 
+;; Ensure final newline on files
+(setq require-final-newline t)
+
 (add-hook 'text-mode-hook 'auto-fill-mode)
 
 (add-hook 'terraform-mode-hook 'terraform-format-on-save-mode)
