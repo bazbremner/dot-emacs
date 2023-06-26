@@ -7,7 +7,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/")
-
+(add-to-list 'load-path "/opt/homebrew/share/emacs/site-lisp/")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; General options.
