@@ -9,6 +9,26 @@
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/")
 (add-to-list 'load-path "/opt/homebrew/share/emacs/site-lisp/")
 
+(setq package-list
+      '(dockerfile-mode docker scala-mode yaml-mode terraform-mode
+ solarized-theme smex rspec-mode puppet-mode projectile markdown-mode
+ magit helm haml-mode groovy-mode go-mode git-blamed flymake-yaml
+ flymake-shell flymake-ruby flx-ido feature-mode exec-path-from-shell
+ diminish solarized-theme better-defaults auto-complete ag)
+      )
+
+; activate all the packages
+(package-initialize)
+
+; fetch the list of packages available
+(unless package-archive-contents
+  (package-refresh-contents))
+
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; General options.
 
@@ -186,9 +206,7 @@
  ;; If there is more than one, they won't work right.
  '(epg-gpg-program "gpg")
  '(frame-background-mode 'dark)
- '(package-selected-packages
-   (quote
-    (neotree yaml-mode terraform-mode solarized-theme smex rspec-mode puppet-mode projectile pallet markdown-mode magit helm haml-mode groovy-mode go-mode git-blame flymake-yaml flymake-shell flymake-ruby flx-ido feature-mode exec-path-from-shell diminish color-theme-solarized clojure-mode better-defaults auto-complete ag))))
+ )
 
 (custom-set-faces
  '(default ((t (:background "nil")))))
