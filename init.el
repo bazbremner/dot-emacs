@@ -27,7 +27,7 @@
 
 (line-number-mode t)
 (column-number-mode t)
-(global-linum-mode t)
+(global-display-line-numbers-mode)
 
 ;; y or n, rather than yes/no to prompts.
 (defalias 'yes-or-no-p 'y-or-n-p)
