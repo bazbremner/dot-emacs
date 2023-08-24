@@ -32,6 +32,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; General options.
 
+;; tune GC and process output values for LSP as per
+;; https://emacs-lsp.github.io/lsp-mode/page/performance/
+(setq read-process-output-max (* 1024 1024 2)) ;; 2MiB
+(setq gc-cons-threshold 100000000)
+
 ;; disable splash screen, *scratch* by default.
 (setq inhibit-startup-screen t)
 
