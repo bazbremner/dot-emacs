@@ -9,25 +9,54 @@
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/")
 (add-to-list 'load-path "/opt/homebrew/share/emacs/site-lisp/")
 
-(setq package-list
-      '(dockerfile-mode docker scala-mode yaml-mode terraform-mode
- solarized-theme smex rspec-mode puppet-mode projectile markdown-mode
- magit helm haml-mode groovy-mode go-mode git-blamed flymake-yaml
- flymake-shell flymake-ruby flx-ido feature-mode exec-path-from-shell
- diminish solarized-theme better-defaults auto-complete ag)
-      )
+; ensure all packages are installed by default
+(setq use-package-always-ensure t)
+
+(use-package ag)
+(use-package auto-complete)
+(use-package better-defaults)
+(use-package company)
+(use-package dap-java :ensure nil)
+(use-package dap-mode :after lsp-mode :config (dap-auto-configure-mode))
+(use-package diminish)
+(use-package docker)
+(use-package dockerfile-mode)
+(use-package exec-path-from-shell)
+(use-package flx-ido)
+(use-package flycheck)
+(use-package flymake-ruby)
+(use-package flymake-shell)
+(use-package flymake-yaml)
+(use-package git-blamed)
+(use-package go-mode)
+(use-package groovy-mode)
+(use-package haml-mode)
+(use-package helm :config (helm-mode))
+(use-package helm-lsp)
+(use-package hydra)
+(use-package lsp-java :config (add-hook 'java-mode-hook 'lsp))
+(use-package lsp-mode :hook ((lsp-mode . lsp-enable-which-key-integration)))
+(use-package lsp-treemacs)
+(use-package lsp-ui)
+(use-package magit)
+(use-package markdown-mode)
+(use-package projectile)
+(use-package rspec-mode)
+(use-package smex)
+(use-package smex)
+(use-package solarized-theme)
+(use-package terraform-mode)
+(use-package which-key :config (add-hook 'java-mode-hook 'lsp))
+(use-package yaml-mode)
+(use-package yasnippet :config (yas-global-mode))
 
 ; activate all the packages
 (package-initialize)
 
-; fetch the list of packages available
+; fetch the list of packages available only if not present, avoiding
+; going to network on each start
 (unless package-archive-contents
   (package-refresh-contents))
-
-; install the missing packages
-(dolist (package package-list)
-  (unless (package-installed-p package)
-    (package-install package)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; General options.
@@ -211,7 +240,17 @@
  ;; If there is more than one, they won't work right.
  '(epg-gpg-program "gpg")
  '(frame-background-mode 'dark)
- )
+ '(package-selected-packages
+   '(ag auto-complete better-defaults diminish docker dockerfile-mode
+        exec-path-from-shell feature-mode flx-ido flymake-ruby
+        flymake-shell flymake-yaml git-blamed go-mode groovy-mode
+        haml-mode helm lsp-mode magit php-mode powershell projectile
+        puppet-mode rspec-mode scala-mode smex solarized-theme
+        terraform-mode yaml-mode)))
 
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(default ((t (:background "nil")))))
